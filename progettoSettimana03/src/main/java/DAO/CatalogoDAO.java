@@ -76,22 +76,4 @@ public class CatalogoDAO {
 		return query.getResultList();
 	}
 
-
-	
-//	public List<Catalogo> findElementiInPrestitoByNumeroTessera(String numeroTessera) {
-//		TypedQuery<Catalogo> query = em.createQuery(
-//				"SELECT c FROM Catalogo c JOIN c.prestiti p JOIN p.utente u WHERE u.numeroTessera = :numeroTessera",
-//				Catalogo.class);
-//		query.setParameter("numeroTessera", numeroTessera);
-//		return query.getResultList();
-//	}
-//
-//	public List<Prestito> findPrestitiScadutiNonRestituiti() {
-//		TypedQuery<Prestito> query = em.createQuery(
-//				"SELECT p FROM Prestito p WHERE p.dataScadenza < :currentDate AND p.stato = 'NON_RESTITUITO'",
-//				Prestito.class);
-//		query.setParameter("currentDate", LocalDate.now());
-//		return query.getResultList();
-//	}
-
 }
