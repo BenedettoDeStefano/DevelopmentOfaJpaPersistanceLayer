@@ -118,7 +118,7 @@ public class App {
 		pd.save(prestito1);
 		pd.save(prestito2);
 
-		Set<Prestito> prestitiByNumeroTessera = pd.findPrestitiByNumeroTessera(54321);
+		Set<Prestito> prestitiByNumeroTessera = pd.findPrestitiByNumeroTessera("12345");
 
 		Set<Prestito> prestitiScaduti = pd.findPrestitiScaduti();
 

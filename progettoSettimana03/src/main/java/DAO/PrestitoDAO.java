@@ -30,10 +30,10 @@ public class PrestitoDAO {
 	}
 
 
-	public Set<Prestito> findPrestitiByNumeroTessera(int numeroTessera) {
+	public Set<Prestito> findPrestitiByNumeroTessera(String string) {
 		TypedQuery<Prestito> query = em.createQuery(
 				"SELECT p FROM Prestito p JOIN p.utente u WHERE u.numeroTessera = :numeroTessera", Prestito.class);
-		query.setParameter("numeroTessera", numeroTessera);
+		query.setParameter("numeroTessera", string);
 		return new HashSet<>(query.getResultList());
 	}
 
