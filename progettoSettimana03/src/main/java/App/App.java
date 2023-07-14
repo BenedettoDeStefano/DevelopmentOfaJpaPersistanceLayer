@@ -119,6 +119,14 @@ public class App {
 		pd.save(prestito2);
 
 		Set<Prestito> prestitiByNumeroTessera = pd.findPrestitiByNumeroTessera("12345");
+		if (!prestitiByNumeroTessera.isEmpty()) {
+			System.out.println("Prestiti trovati per il numero di tessera 12345:");
+			for (Prestito prestito : prestitiByNumeroTessera) {
+				System.out.println(prestito);
+			}
+		} else {
+			System.out.println("Nessun prestito trovato per il numero di tessera 12345.");
+		}
 
 		Set<Prestito> prestitiScaduti = pd.findPrestitiScaduti();
 
