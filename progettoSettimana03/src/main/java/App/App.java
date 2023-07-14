@@ -130,6 +130,15 @@ public class App {
 
 		Set<Prestito> prestitiScaduti = pd.findPrestitiScaduti();
 
+		if (!prestitiScaduti.isEmpty()) {
+			System.out.println("Prestiti scaduti e non restituiti:");
+			for (Prestito prestito : prestitiScaduti) {
+				System.out.println(prestito);
+			}
+		} else {
+			System.out.println("Nessun prestito scaduto e non restituito.");
+		}
+
 
 	}
 
